@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pefa-ruiru-east.netlify.app/sitemap.xml
+Sitemap: https://pefa-ruiru-east-church.vercel.app/sitemap.xml
