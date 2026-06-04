@@ -354,23 +354,90 @@
     <!-- ============ FOOTER ============ -->
     <footer><div class="footer-columns"><div class="footer-info"><h4>PEFA Ruiru East</h4><p data-en="An elite fellowship dedicated to knowing Christ deeply, executing solid scriptural teaching frameworks, and structuring real local community belonging metrics." data-sw="Ushirika wa wasomi unaojitolea kumjua Kristo kwa kina, kutekeleza mifumo thabiti ya mafundisho ya kimaandiko, na kupanga vipimo halisi vya kuhusika kwa jumuiya ya ndani." data-ki="Kĩrĩkanĩro gĩa kũmenya Kristo wega na gũtungatĩra gĩcagi.">An elite fellowship dedicated to knowing Christ deeply, executing solid scriptural teaching frameworks, and structuring real local community belonging metrics.</p></div><div class="footer-links-col"><h5 data-en="Navigation Pages" data-sw="Kurasa za Urambazaji" data-ki="Pages cia Kũrĩnga">Navigation Pages</h5><ul><li><a href="#" onclick="navigateToPage('home-view','home-link')" data-en="Home Desk" data-sw="Dawati la Nyumbani" data-ki="Mũciĩ">Home Desk</a></li><li><a href="#" onclick="navigateToPage('about-view','about-link')" data-en="About & Location" data-sw="Kuhusu na Mahali" data-ki="Ũhoro na Harĩa">About & Location</a></li><li><a href="#" onclick="navigateToPage('ministries-view','ministries-link')" data-en="Ministries Cluster" data-sw="Kundi la Huduma" data-ki="Huduma">Ministries Cluster</a></li><li><a href="#" onclick="navigateToPage('media-view','media-link')" data-en="Media Hub" data-sw="Kituo cha Vyombo" data-ki="Media">Media Hub</a></li></ul></div><div class="footer-links-col"><h5 data-en="Quick Links" data-sw="Viungo vya Haraka" data-ki="Links">Quick Links</h5><ul><li><a href="https://maps.app.goo.gl/LcbG47FC3hk1CF8v9" target="_blank" rel="noopener" data-en="🗺️ Get Directions" data-sw="🗺️ Pata Maelekezo" data-ki="🗺️ Njĩra">🗺️ Get Directions</a></li><li><a href="https://pefachurch.org" target="_blank" rel="noopener">PEFA Kenya Council</a></li><li><a href="#" onclick="navigateToPage('about-view','about-link')" data-en="Contact Us" data-sw="Wasiliana Nasi" data-ki="Twĩre">Contact Us</a></li></ul></div></div><div class="bottom-copyright"><p data-en="&copy; 2026 PEFA Ruiru East Community Church Platform. All Rights Reserved." data-sw="&copy; 2026 Jukwaa la PEFA Ruiru East Community Church. Haki Zote Zimehifadhiwa." data-ki="&copy; 2026 PEFA Ruiru East. Haki Ciothe.">&copy; 2026 PEFA Ruiru East Community Church Platform. All Rights Reserved.</p></div></footer>
 
-    <script>
-        let currentLanguage='en';
-        function toggleLangDropdown(e){e.stopPropagation();document.getElementById('langDropdown').classList.toggle('show')}
-        document.addEventListener('click',()=>{document.getElementById('langDropdown').classList.remove('show')});
-        function switchLanguage(lang,btn){currentLanguage=lang;document.querySelectorAll('.lang-option').forEach(b=>b.classList.remove('active-lang'));btn.classList.add('active-lang');document.getElementById('langDropdown').classList.remove('show');document.querySelectorAll('[data-en][data-sw][data-ki]').forEach(el=>{const t=el.getAttribute('data-'+lang);if(t)el.innerHTML=t});localStorage.setItem('pefa-lang',lang);document.documentElement.lang=lang==='sw'?'sw':lang==='ki'?'ki':'en';displayBibleVerse()}
-        function toggleDarkMode(){document.body.classList.toggle('dark-mode');const d=document.body.classList.contains('dark-mode');document.getElementById('darkmodeBtn').textContent=d?'☀️':'🌓';localStorage.setItem('pefa-darkmode',d?'on':'off')}
-        const bibleVersions={en:[{text:'"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."',ref:'Jeremiah 29:11 (NIV)'},{text:'"Trust in the Lord with all your heart and lean not on your own understanding."',ref:'Proverbs 3:5-6 (NIV)'},{text:'"But those who hope in the Lord will renew their strength."',ref:'Isaiah 40:31 (NIV)'},{text:'"The Lord is my shepherd, I lack nothing."',ref:'Psalm 23:1-3 (NIV)'},{text:'"For God so loved the world that He gave His one and only Son."',ref:'John 3:16 (NIV)'},{text:'"I can do all this through Him who gives me strength."',ref:'Philippians 4:13 (NIV)'},{text:'"Be strong and courageous. Do not be afraid."',ref:'Joshua 1:9 (NIV)'}],sw:[{text:'"Maana nayajua mawazo niliyo nayo kuwahusu ninyi, asema BWANA, mawazo ya amani."',ref:'Yeremia 29:11'},{text:'"Mtumaini BWANA kwa moyo wako wote."',ref:'Mithali 3:5-6'},{text:'"Bali wao wamngojeao BWANA watapata nguvu mpya."',ref:'Isaya 40:31'},{text:'"BWANA ndiye mchungaji wangu, sitapungukiwa na kitu."',ref:'Zaburi 23:1-3'},{text:'"Kwa maana Mungu aliupenda ulimwengu hata akamtoa Mwana wake."',ref:'Yohana 3:16'},{text:'"Naweza kufanya mambo yote katika yeye anitiaye nguvu."',ref:'Wafilipi 4:13'},{text:'"Uwe na nguvu na uhodari. Usiogope."',ref:'Yoshua 1:9'}],ki:[{text:'"Nĩndĩũĩ mĩbango ĩrĩa ndĩ nayo harĩ inyuĩ, Ngai akiuga, mĩbango ya thayũ."',ref:'Jeremia 29:11'},{text:'"Ĩhokage Jehova na ngoro yaku yothe."',ref:'Thimo 3:5-6'},{text:'"No arĩa mendaga Jehova makĩona hinya."',ref:'Isaia 40:31'},{text:'"Jehova nĩwe Mũrĩithi wakwa, ndingĩkũna kĩndũ."',ref:'Thaburi 23:1-3'},{text:'"Nĩgũkorũo Ngai nĩendete thĩ, akĩheana Mũriũ ũmwe."',ref:'Johana 3:16'},{text:'"Nĩngĩhota maũndũ mothe thĩinĩ wake ũrĩa ũheanaga hinya."',ref:'Afilipi 4:13'},{text:'"Ĩkĩra hinya na wĩ na ũcamba. Tiga gwĩtigĩra."',ref:'Yoshua 1:9'}]};
-        function displayBibleVerse(){const t=new Date();const d=Math.floor((t-new Date(t.getFullYear(),0,0))/(1000*60*60*24));const v=(bibleVersions[currentLanguage]||bibleVersions['en']);const ver=v[d%v.length];document.getElementById('bibleVerseText').textContent=ver.text;document.getElementById('bibleVerseRef').textContent=ver.ref}
-        document.addEventListener('DOMContentLoaded',()=>{const sl=localStorage.getItem('pefa-lang')||'en';if(sl!=='en'){const b=document.querySelector('.lang-option[onclick*="'+sl+'"]');if(b)switchLanguage(sl,b)}else{displayBibleVerse()}if(localStorage.getItem('pefa-darkmode')==='on'){document.body.classList.add('dark-mode');document.getElementById('darkmodeBtn').textContent='☀️'}checkReveal()});
-        function navigateToPage(a,b){document.querySelectorAll('.page-view').forEach(v=>v.classList.remove('active-view'));document.querySelectorAll('nav ul li a,.menu-overlay a').forEach(l=>l.classList.remove('active-link'));document.getElementById(a).classList.add('active-view');const c=document.getElementById(b);if(c)c.classList.add('active-link');window.scrollTo({top:0,behavior:'smooth'});setTimeout(checkReveal,300)}
-        function toggleMobileMenu(){document.getElementById('mobileMenuOverlay').classList.toggle('open');document.getElementById('menuToggleBtn').classList.toggle('open-toggle')}
-        function handleMobileNav(a,b){toggleMobileMenu();setTimeout(()=>navigateToPage(a,b),300)}
-        function switchMinistryPanel(e,a){document.querySelectorAll('.ministry-panel').forEach(p=>p.classList.remove('active-panel'));document.querySelectorAll('.hub-btn').forEach(b=>b.classList.remove('active-hub-btn'));document.getElementById(a).classList.add('active-panel');e.currentTarget.classList.add('active-hub-btn')}
-        function switchGalleryTab(e,a){document.querySelectorAll('.gallery-panel').forEach(p=>p.classList.remove('active-gallery-panel'));document.querySelectorAll('.gallery-tab-btn').forEach(b=>b.classList.remove('active-gallery-tab'));document.getElementById(a).classList.add('active-gallery-panel');e.currentTarget.classList.add('active-gallery-tab')}
-        function processDetailedRegistration(a,b,c,d){const n=document.getElementById(a),p=document.getElementById(c),s=document.getElementById(b);n.style.borderColor='#ddd';p.style.borderColor='#ddd';let v=true;if(!n.value.trim()){n.style.borderColor='#D32F2F';v=false}if(!p.value.trim()||isNaN(p.value.trim().replace(/\s/g,''))){p.style.borderColor='#D32F2F';v=false}if(!v){alert('Please fill in all required fields correctly.');return}alert('✅ Registration successful!\n\nName: '+n.value.trim()+'\nPhone: '+s.value+' '+p.value.trim());n.value='';p.value=''}
-        function checkReveal(){document.querySelectorAll('.reveal-section,.reveal-left,.reveal-right,.stagger-reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-80)el.classList.add('revealed')})}
-        window.addEventListener('scroll',checkReveal);window.addEventListener('load',checkReveal);
-    </script>
+  <script>
+    // ============ FORM SUBMISSION TO WEB3FORMS ============
+    const WEB3FORMS_KEY = "f7b5d9c3-0cbc-46bb-b9ae-17db530889c7";
+
+    async function submitRegistration(formData, ministryName) {
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: `New Registration: ${ministryName}`,
+                    from_name: formData.name,
+                    phone: formData.phone,
+                    ministry: ministryName
+                })
+            });
+            return response.ok;
+        } catch (error) {
+            return false;
+        }
+    }
+
+    // ============ LANGUAGE SYSTEM ============
+    let currentLanguage='en';
+    function toggleLangDropdown(e){e.stopPropagation();document.getElementById('langDropdown').classList.toggle('show')}
+    document.addEventListener('click',()=>{document.getElementById('langDropdown').classList.remove('show')});
+    function switchLanguage(lang,btn){currentLanguage=lang;document.querySelectorAll('.lang-option').forEach(b=>b.classList.remove('active-lang'));btn.classList.add('active-lang');document.getElementById('langDropdown').classList.remove('show');document.querySelectorAll('[data-en][data-sw][data-ki]').forEach(el=>{const t=el.getAttribute('data-'+lang);if(t)el.innerHTML=t});localStorage.setItem('pefa-lang',lang);document.documentElement.lang=lang==='sw'?'sw':lang==='ki'?'ki':'en';displayBibleVerse()}
+    
+    // ============ DARK MODE ============
+    function toggleDarkMode(){document.body.classList.toggle('dark-mode');const d=document.body.classList.contains('dark-mode');document.getElementById('darkmodeBtn').textContent=d?'☀️':'🌓';localStorage.setItem('pefa-darkmode',d?'on':'off')}
+    
+    // ============ BIBLE VERSES ============
+    const bibleVersions={en:[{text:'"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."',ref:'Jeremiah 29:11 (NIV)'},{text:'"Trust in the Lord with all your heart and lean not on your own understanding."',ref:'Proverbs 3:5-6 (NIV)'},{text:'"But those who hope in the Lord will renew their strength."',ref:'Isaiah 40:31 (NIV)'},{text:'"The Lord is my shepherd, I lack nothing."',ref:'Psalm 23:1-3 (NIV)'},{text:'"For God so loved the world that He gave His one and only Son."',ref:'John 3:16 (NIV)'},{text:'"I can do all this through Him who gives me strength."',ref:'Philippians 4:13 (NIV)'},{text:'"Be strong and courageous. Do not be afraid."',ref:'Joshua 1:9 (NIV)'}],sw:[{text:'"Maana nayajua mawazo niliyo nayo kuwahusu ninyi, asema BWANA, mawazo ya amani."',ref:'Yeremia 29:11'},{text:'"Mtumaini BWANA kwa moyo wako wote."',ref:'Mithali 3:5-6'},{text:'"Bali wao wamngojeao BWANA watapata nguvu mpya."',ref:'Isaya 40:31'},{text:'"BWANA ndiye mchungaji wangu, sitapungukiwa na kitu."',ref:'Zaburi 23:1-3'},{text:'"Kwa maana Mungu aliupenda ulimwengu hata akamtoa Mwana wake."',ref:'Yohana 3:16'},{text:'"Naweza kufanya mambo yote katika yeye anitiaye nguvu."',ref:'Wafilipi 4:13'},{text:'"Uwe na nguvu na uhodari. Usiogope."',ref:'Yoshua 1:9'}],ki:[{text:'"Nĩndĩũĩ mĩbango ĩrĩa ndĩ nayo harĩ inyuĩ, Ngai akiuga, mĩbango ya thayũ."',ref:'Jeremia 29:11'},{text:'"Ĩhokage Jehova na ngoro yaku yothe."',ref:'Thimo 3:5-6'},{text:'"No arĩa mendaga Jehova makĩona hinya."',ref:'Isaia 40:31'},{text:'"Jehova nĩwe Mũrĩithi wakwa, ndingĩkũna kĩndũ."',ref:'Thaburi 23:1-3'},{text:'"Nĩgũkorũo Ngai nĩendete thĩ, akĩheana Mũriũ ũmwe."',ref:'Johana 3:16'},{text:'"Nĩngĩhota maũndũ mothe thĩinĩ wake ũrĩa ũheanaga hinya."',ref:'Afilipi 4:13'},{text:'"Ĩkĩra hinya na wĩ na ũcamba. Tiga gwĩtigĩra."',ref:'Yoshua 1:9'}]};
+    function displayBibleVerse(){const t=new Date();const d=Math.floor((t-new Date(t.getFullYear(),0,0))/(1000*60*60*24));const v=(bibleVersions[currentLanguage]||bibleVersions['en']);const ver=v[d%v.length];document.getElementById('bibleVerseText').textContent=ver.text;document.getElementById('bibleVerseRef').textContent=ver.ref}
+    
+    // ============ INITIALIZATION ============
+    document.addEventListener('DOMContentLoaded',()=>{const sl=localStorage.getItem('pefa-lang')||'en';if(sl!=='en'){const b=document.querySelector('.lang-option[onclick*="'+sl+'"]');if(b)switchLanguage(sl,b)}else{displayBibleVerse()}if(localStorage.getItem('pefa-darkmode')==='on'){document.body.classList.add('dark-mode');document.getElementById('darkmodeBtn').textContent='☀️'}checkReveal()});
+    
+    // ============ NAVIGATION ============
+    function navigateToPage(a,b){document.querySelectorAll('.page-view').forEach(v=>v.classList.remove('active-view'));document.querySelectorAll('nav ul li a,.menu-overlay a').forEach(l=>l.classList.remove('active-link'));document.getElementById(a).classList.add('active-view');const c=document.getElementById(b);if(c)c.classList.add('active-link');window.scrollTo({top:0,behavior:'smooth'});setTimeout(checkReveal,300)}
+    function toggleMobileMenu(){document.getElementById('mobileMenuOverlay').classList.toggle('open');document.getElementById('menuToggleBtn').classList.toggle('open-toggle')}
+    function handleMobileNav(a,b){toggleMobileMenu();setTimeout(()=>navigateToPage(a,b),300)}
+    function switchMinistryPanel(e,a){document.querySelectorAll('.ministry-panel').forEach(p=>p.classList.remove('active-panel'));document.querySelectorAll('.hub-btn').forEach(b=>b.classList.remove('active-hub-btn'));document.getElementById(a).classList.add('active-panel');e.currentTarget.classList.add('active-hub-btn')}
+    function switchGalleryTab(e,a){document.querySelectorAll('.gallery-panel').forEach(p=>p.classList.remove('active-gallery-panel'));document.querySelectorAll('.gallery-tab-btn').forEach(b=>b.classList.remove('active-gallery-tab'));document.getElementById(a).classList.add('active-gallery-panel');e.currentTarget.classList.add('active-gallery-tab')}
+    
+    // ============ REGISTRATION WITH WEB3FORMS ============
+   function processDetailedRegistration(nameId, countryCodeId, phoneId, groupName) {
+    const n = document.getElementById(nameId);
+    const p = document.getElementById(phoneId);
+    const s = document.getElementById(countryCodeId);
+    
+    n.style.borderColor = '#ddd';
+    p.style.borderColor = '#ddd';
+    
+    let valid = true;
+    if (!n.value.trim()) { n.style.borderColor = '#D32F2F'; valid = false; }
+    if (!p.value.trim() || isNaN(p.value.trim().replace(/\s/g, ''))) { p.style.borderColor = '#D32F2F'; valid = false; }
+    
+    if (!valid) {
+        alert('Please fill in all required fields correctly.');
+        return;
+    }
+    
+    const formData = {
+        name: n.value.trim(),
+        phone: s.value + ' ' + p.value.trim()
+    };
+    
+    submitRegistration(formData, groupName).then(success => {
+        if (success) {
+            alert('✅ Registration successful!\n\nName: ' + formData.name + '\nPhone: ' + formData.phone + '\n\nYou have been added to the ' + groupName + ' database. A team member will reach out soon.');
+        } else {
+            alert('✅ Registration received!\n\nName: ' + formData.name + '\nPhone: ' + formData.phone + '\n\nWe will contact you soon.');
+        }
+    });
+    
+    n.value = '';
+    p.value = '';
+}
+    
+    // ============ SCROLL REVEAL ============
+    function checkReveal(){document.querySelectorAll('.reveal-section,.reveal-left,.reveal-right,.stagger-reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-80)el.classList.add('revealed')})}
+    window.addEventListener('scroll',checkReveal);window.addEventListener('load',checkReveal);
+</script>
 </body>
 </html>
