@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://pefa-ruiru-east.netlify.app/sitemap.xml
